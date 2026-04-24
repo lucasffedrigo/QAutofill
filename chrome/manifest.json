@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "QAutofill",
-  "version": "1.2",
-  "description": "Preencha formulários instantaneamente com dados baseados em técnicas do CTFL/ISTQB: Valores Limites, Partições, CPF/CNPJ e mais.",
+  "version": "1.3.0",
+  "description": "Preencha formularios instantaneamente com dados baseados em tecnicas do CTFL/ISTQB: valores limite, particoes, CPF/CNPJ e mais.",
   "permissions": [
     "activeTab",
     "contextMenus"
@@ -22,8 +22,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "icons": {

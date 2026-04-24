@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "QAutofill",
+  "version": "1.0.0",
+  "description": "Preencha formularios instantaneamente com dados baseados em tecnicas do CTFL/ISTQB: valores limite, particoes, CPF/CNPJ e mais.",
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://viacep.com.br/*"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/16x16.png",
+      "32": "icons/32x32.png"
+    },
+    "default_title": "QAutofill"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "qautofill@lucasffedrigo.dev",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
